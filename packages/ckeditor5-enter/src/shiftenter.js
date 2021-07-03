@@ -62,9 +62,9 @@ export default class ShiftEnter extends Plugin {
 			data.preventDefault();
 
 			// The hard enter key is handled by the Enter plugin.
-			if ( !data.isSoft ) {
-				return;
-			}
+			// if ( !data.isSoft ) {
+			// 	return;
+			// }
 
 			editor.execute( 'shiftEnter' );
 			view.scrollToTheSelection();

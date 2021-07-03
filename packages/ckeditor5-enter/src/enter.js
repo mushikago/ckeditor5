@@ -41,13 +41,13 @@ export default class Enter extends Plugin {
 			data.preventDefault();
 
 			// The soft enter key is handled by the ShiftEnter plugin.
-			if ( data.isSoft ) {
-				return;
-			}
-
-			editor.execute( 'enter' );
-
-			view.scrollToTheSelection();
+			// if ( data.isSoft ) {
+			// 	return;
+			// }
+			//
+			// editor.execute( 'enter' );
+			//
+			// view.scrollToTheSelection();
 		}, { priority: 'low' } );
 	}
 }

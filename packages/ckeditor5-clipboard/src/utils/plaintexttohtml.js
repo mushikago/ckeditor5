@@ -19,7 +19,7 @@ export default function plainTextToHtml( text ) {
 		.replace( /</g, '&lt;' )
 		.replace( />/g, '&gt;' )
 		// Creates a paragraph for each double line break.
-		.replace( /\r?\n\r?\n/g, '</p><p>' )
+		.replace( /\r?\n\r?\n/g, '<br><br>' )
 		// Creates a line break for each single line break.
 		.replace( /\r?\n/g, '<br>' )
 		// Preserve trailing spaces (only the first and last one – the rest is handled below).
@@ -30,7 +30,7 @@ export default function plainTextToHtml( text ) {
 
 	if ( text.includes( '</p><p>' ) || text.includes( '<br>' ) ) {
 		// If we created paragraphs above, add the trailing ones.
-		text = `<p>${ text }</p>`;
+		// text = `<p>${ text }</p>`;
 	}
 
 	// TODO:
